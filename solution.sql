@@ -1,10 +1,6 @@
--- ============================================
--- SOLUTION - EMPLOYEE AGGREGATE FUNCTIONS
--- ============================================
-
-USE CollegeDB;
-
--- Create Employee table
+create database sri;
+USE sri;
+ Create Employee table
 CREATE TABLE Employee (
     EmployeeID INT PRIMARY KEY,
     EmployeeName VARCHAR(30) NOT NULL,
@@ -12,7 +8,7 @@ CREATE TABLE Employee (
     Salary DECIMAL(10,2) NOT NULL
 );
 
--- Insert employee records
+Insert employee records
 INSERT INTO Employee
     (EmployeeID, EmployeeName, Department, Salary)
 VALUES
@@ -22,18 +18,18 @@ VALUES
     (104, 'Suresh', 'IT', 45000),
     (105, 'Latha', 'HR', 30000);
 
--- COUNT() - Count the number of salaries
+COUNT() - Count the number of salaries
 SELECT COUNT(Salary) AS Total_Employees
 FROM Employee;
 
--- MAX() - Find the highest salary
+ MAX() - Find the highest salary
 SELECT MAX(Salary) AS Maximum_Salary
 FROM Employee;
 
--- MIN() - Find the lowest salary
+MIN() - Find the lowest salary
 SELECT MIN(Salary) AS Minimum_Salary
 FROM Employee;
 
--- AVG() - Find the average salary
+ AVG() - Find the average salary
 SELECT AVG(Salary) AS Average_Salary
 FROM Employee;
